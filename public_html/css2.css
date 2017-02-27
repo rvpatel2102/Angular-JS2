@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 24, 2012, 2:18:50 PM
+    Author     : r_v21
+*/
+
+nav ul li , .dropdown
+{
+    display: inline-block;
+    position: relative;
+    padding: 0em;
+}
+
+nav ul li a, .dropbtn
+{
+    display: inline-block;  
+    padding: 8px 1em;
+    text-decoration: none;
+    color: whitesmoke;
+}
+nav ul li a:hover,.dropdown:hover
+{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    background-color: rgb(13,60,85);
+}
+
+nav ul li .dropdown-content
+{
+    display: none;
+    min-width: 150px;
+    position: absolute;
+    background-color: rgb(249,249,249);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    
+}
+
+nav ul li .dropdown-content a
+{
+    display: block;
+    padding: .5em .5em .5em .5em;
+    box-shadow: none;    
+    text-decoration: none;
+    color: black;
+}
+nav ul li .dropdown-content a:hover
+{
+    background-color: rgb(240,240,240);
+}
+nav ul li.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.pemscolor 
+{
+    color: rgb(9,154,218);
+}
+
+.loginbox
+{
+    background: linear-gradient(whitesmoke, rgb(9,154,218));
+    border-radius: 100px 100px 100px 0px;
+    margin: 10.313em auto;
+    height: max-content;
+    width: 40%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    padding: 1.5em 1.5em .5em;
+}
+
+.txtbox
+{
+    margin: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    background-color: rgb(249,249,249);
+    min-width: 50%;
+    max-width: 54%;
+    padding:.5em;
+    color: black;
+    font-size: 16px;
+    display: inline-block;    
+    border-radius: 5px;
+}

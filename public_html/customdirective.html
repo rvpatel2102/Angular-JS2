@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+<!--        <link rel="stylesheet" type="text/css" href="pems.css">
+        <link rel="stylesheet" type="text/css" href="css2.css">-->
+        <link rel="stylesheet" type="text/css" href="mincss.css">
+        
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>-->
+        <script src="bower_components/angular/angular.min.js"></script>
+        
+    </head>
+    <body ng-app="myapp" ng-controller="mainctrl">
+        <input type="text" ng-model="fsize" placeholder="Enter size">
+        <p fontscale='fsize' ng-transclude>Hello World</p>
+        
+        <div>
+            <nav-bar navlist="list1"></nav-bar>
+            
+            <input type="text" ng-model="header"> Header
+            <input type="text" ng-model="url"> Url
+            <button type="button" ng-click="addnew(1)">Add1</button>
+            <button type="button" ng-click="addnew(2)">Add2</button>
+            
+            <nav-bar navlist="list2"></nav-bar>
+        </div>        
+        <script src="customdirective.js"></script>
+    </body>
+</html>

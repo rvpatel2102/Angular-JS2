@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        
+        <div ng-app="myapp" ng-controller="ctrl">
+            <form name="frm"  ng-submit="addnew()" novalidate="">
+            <input type="text" pattern="[A-Za-z]+" ng-model="newduty" placeholder="Duty" required>
+            <button type="submit">Add Duty</button>
+            </form>
+            
+            <div ng-repeat="x in arr">
+                
+                <div ng-if='!(x.val)' >                    
+                    <input type="checkbox" ng-model="x.name" ng-change="myfunc(x.id)"> {{x.name + " " + x.id + " " + x.val}}
+                </div>
+            </div>        
+            
+        </div>
+        
+        <script>
+            var newapp = angular.module("myapp",[]);
+            newapp.controller("ctrl", function($scope){
+                
+                $scope.did=2;
+                $scope.arr= [
+                    {name : "Clean Toilet", id : 0, val:false},
+                    {name : "Sweep the Floor", id : 1, val:false}
+                ];
+                $scope.addnew = function(){
+                    window.alert($scope.newduty + " "  + $scope.did);
+                  $scope.arr.push({name:$scope.newduty, id:$scope.did, val:false});
+                  $scope.did++;
+                };
+                
+                $scope.myfunc = function (a) {
+                    window.alert(a);
+                    $scope.arr[a].val=true;
+                };
+                
+            });
+            
+            
+        </script>
+        
+    </body>
+</html>
